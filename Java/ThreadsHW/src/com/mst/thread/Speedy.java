@@ -4,10 +4,8 @@ public class Speedy implements Runnable{
 	private boolean flag = false;
 	private Speedy speedy; 
 	private int count = 0;
-		
-	public Speedy() {
-		
-	}
+	
+	public Speedy() {}
 	
 	public Speedy(Speedy speedy) {
 		this.speedy = speedy;
@@ -24,7 +22,7 @@ public class Speedy implements Runnable{
 	public void setSpeedy(Speedy speedy) {
 		this.speedy = speedy;
 	}
-
+	
 	@Override
 	public void run() {
 		try {
@@ -36,7 +34,6 @@ public class Speedy implements Runnable{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-<<<<<<< HEAD:ThreadsHW/src/com/mst/thread/Speedy.java
 		
 		//synchronized(this){
 			if (!flag) {
@@ -47,15 +44,5 @@ public class Speedy implements Runnable{
 						+ " and is stopped by another speedy");
 			}
 		//}
-=======
-			
-		if (!flag) {
-			speedy.stop();
-			System.out.println(Thread.currentThread().getName() + " counted to 100 and stopped the another speedy");
-		} else {
-			System.out.println(Thread.currentThread().getName() + " counted to " + getCount()
-						+ " and is stopped by another speedy");
-		}
->>>>>>> main:Java/ThreadsHW/src/com/mst/thread/Speedy.java
 	}
 }
